@@ -1,0 +1,563 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StreamWave Entertainment | Content Performance Analysis</title>
+
+  <style>
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f8f4f9;
+      color: #342b39;
+      line-height: 1.8;
+    }
+
+    header {
+      background: linear-gradient(135deg, #19091f, #57245a);
+      color: #fff;
+      text-align: center;
+      padding: 60px 20px;
+    }
+
+    header h1 {
+      font-size: clamp(26px, 4vw, 40px);
+      margin: 0;
+      letter-spacing: 1px;
+    }
+
+    header p {
+      color: #e8bde8;
+      margin-bottom: 0;
+    }
+
+    main {
+      max-width: 1200px;
+      margin: 45px auto;
+      padding: 0 20px;
+    }
+
+    .intro, .dashboard, .conclusion {
+      background: white;
+      padding: 34px;
+      border-radius: 12px;
+      margin-bottom: 35px;
+      box-shadow: 0 5px 20px rgba(50, 15, 55, 0.07);
+    }
+
+    h2 {
+      color: #67266c;
+      line-height: 1.35;
+    }
+
+    h3 {
+      color: #783780;
+      margin-bottom: 8px;
+    }
+
+    .back {
+      display: inline-block;
+      color: #67266c;
+      text-decoration: none;
+      font-weight: bold;
+      margin-bottom: 25px;
+    }
+
+    .dashboard img {
+      display: block;
+      width: 100%;
+      height: auto;
+      margin: 25px 0;
+      border-radius: 8px;
+      border: 1px solid #e8d9eb;
+    }
+
+    .findings {
+      border-left: 4px solid #a450a9;
+      padding-left: 22px;
+      margin-top: 28px;
+    }
+
+    .recommendation {
+      background: #f8eff9;
+      border-radius: 8px;
+      padding: 20px 24px;
+      margin-top: 25px;
+    }
+
+    .recommendation h3 {
+      margin-top: 0;
+    }
+
+    footer {
+      text-align: center;
+      color: #806d84;
+      padding: 30px 20px;
+    }
+
+    @media (max-width: 600px) {
+      .intro, .dashboard, .conclusion {
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>STREAMWAVE ENTERTAINMENT</h1>
+  <p>
+    Viewer Engagement | Subscriber Retention |
+    Content Investment Analysis
+  </p>
+</header>
+
+<main>
+
+<a href="index.html" class="back">
+  &larr; Back to Portfolio
+</a>
+
+<!-- PROJECT INTRODUCTION -->
+
+<section class="intro">
+  <h2>Project Overview</h2>
+
+  <p>
+    Streaming platforms generate large volumes
+    of viewing data, but high viewing numbers
+    alone do not tell management where the next
+    content investment should go.
+  </p>
+
+  <p>
+    This project examines 60,000 viewing records
+    across 500 content titles, nine genres and
+    999 users to understand not only what audiences
+    watch, but how they engage with the content.
+    The analysis considers viewing hours,
+    completion behaviour, repeat viewing,
+    subscriber activity and content efficiency.
+  </p>
+
+  <p>
+    Using Microsoft Excel, I prepared and analysed
+    the viewing data and developed two interactive
+    dashboards covering Genre Engagement &
+    Performance and Retention & Content Efficiency.
+    The objective was to distinguish audience
+    popularity from engagement quality and assess
+    how effectively the available content catalogue
+    generates viewing activity.
+  </p>
+
+  <p>
+    The findings provide a basis for reviewing
+    content acquisition, catalogue composition
+    and audience retention priorities without
+    assuming that the most-watched genre is
+    automatically the strongest investment.
+  </p>
+</section>
+
+<!-- DASHBOARD 1 -->
+
+<section class="dashboard">
+
+  <h2>01. Genre Engagement & Performance</h2>
+
+  <p>
+    This dashboard evaluates viewing activity
+    and engagement quality across the nine genres.
+    It compares total viewing hours, average
+    completion rates, completion outcomes
+    and repeat viewing behaviour to identify
+    where audience reach and content engagement
+    differ.
+  </p>
+
+  <a href="images/streamwave-dashboard-1.png"
+     target="_blank" rel="noopener">
+    <img src="images/streamwave-dashboard-1.png"
+         alt="StreamWave Genre Engagement Dashboard">
+  </a>
+
+  <div class="findings">
+
+    <h3>Key Business Findings</h3>
+
+    <p>
+      The dataset records 100,308 total viewing
+      hours, an average completion rate of 88%,
+      a completion success rate of 52% and
+      a repeat view rate of 91%.
+      These indicators describe different
+      aspects of audience behaviour.
+      The average completion rate reflects
+      how much of the content viewers watched,
+      while completion success measures
+      the proportion of viewing records
+      meeting the project's completion criteria.
+      They should not be interpreted as
+      interchangeable measures.
+    </p>
+
+    <p>
+      Drama generated the highest total viewing
+      hours at 24,333, followed by Comedy
+      at 19,691. Documentary and Sci-Fi
+      also contributed substantial viewing
+      activity, with 15,462 and 15,431 hours
+      respectively. This places Drama and
+      Comedy among the strongest genres
+      for overall audience consumption.
+    </p>
+
+    <p>
+      However, total viewing hours are influenced
+      by several factors, including the number
+      of titles available, audience size and
+      viewing frequency. A genre with a larger
+      catalogue may naturally accumulate more
+      viewing hours. Therefore, total hours
+      alone should not determine future
+      content investment.
+    </p>
+
+    <p>
+      Biography presents an important contrast.
+      Although it contributes relatively few
+      viewing hours, it records the highest
+      average completion rate at approximately
+      95%. This suggests that the viewers
+      who engage with Biography content
+      tend to watch a greater proportion
+      of it, even though its overall
+      audience activity is much smaller.
+    </p>
+
+    <p>
+      The completion-status comparison adds
+      another perspective. Comedy records
+      a completion success rate of 59%,
+      while Drama records 52%.
+      Horror and Musical show much lower
+      completion success rates in the
+      displayed comparison.
+      These differences suggest that
+      engagement quality varies by genre
+      and cannot be inferred simply
+      from viewing hours.
+    </p>
+
+    <p>
+      The views-per-viewer comparison further
+      separates broad audience activity
+      from repeat engagement. Drama and Comedy
+      record approximately 13 views per viewer,
+      compared with lower figures across
+      several smaller genres.
+      This reinforces their importance
+      to recurring audience activity,
+      although the dashboard alone does
+      not establish whether this behaviour
+      translates into longer subscription
+      retention.
+    </p>
+
+    <p>
+      Taken together, these findings suggest
+      that Drama and Comedy support substantial
+      viewing activity, while smaller genres
+      such as Biography may deliver
+      comparatively strong engagement
+      among the audiences they attract.
+    </p>
+
+  </div>
+
+  <div class="recommendation">
+
+    <h3>Management Considerations</h3>
+
+    <p>
+      StreamWave should maintain visibility
+      over its high-volume genres while
+      investigating why selected smaller
+      genres achieve stronger completion
+      behaviour. Future content decisions
+      should compare viewing hours,
+      completion success, repeat engagement
+      and catalogue size rather than
+      relying on a single popularity metric.
+    </p>
+
+    <p>
+      Before increasing investment in any
+      genre, management should also assess
+      acquisition costs, content availability,
+      audience growth and performance
+      over comparable periods.
+    </p>
+
+  </div>
+
+</section>
+
+<!-- DASHBOARD 2 -->
+
+<section class="dashboard">
+
+  <h2>02. Retention & Content Efficiency</h2>
+
+  <p>
+    This dashboard examines subscriber activity
+    and the relationship between content supply
+    and audience consumption. It brings together
+    active and inactive subscriber rates,
+    subscription tiers, repeat viewing
+    and viewing hours per title to assess
+    how efficiently different genres
+    generate engagement.
+  </p>
+
+  <a href="images/streamwave-dashboard-2.png"
+     target="_blank" rel="noopener">
+    <img src="images/streamwave-dashboard-2.png"
+         alt="StreamWave Retention and Content Efficiency Dashboard">
+  </a>
+
+  <div class="findings">
+
+    <h3>Key Business Findings</h3>
+
+    <p>
+      The dashboard reports an active subscriber
+      rate of 86%, with 14% classified as
+      inactive. It also records 999 subscribers,
+      500 content titles and a repeat view
+      rate of 91%. These measures provide
+      a useful snapshot of subscriber activity
+      and engagement across the catalogue.
+    </p>
+
+    <p>
+      Most genres display an active subscriber
+      share of approximately 86% to 87%,
+      while Biography records a lower
+      active share of 76% and an inactive
+      share of 24%. This is noteworthy
+      because Biography performs strongly
+      on average completion, yet has
+      a comparatively weaker subscriber
+      activity profile in this dashboard.
+    </p>
+
+    <p>
+      This contrast illustrates why content
+      engagement and subscriber activity
+      should be evaluated separately.
+      A genre may appeal strongly to the
+      viewers who consume it without
+      necessarily having the broadest
+      or most active subscriber audience.
+      The relationship warrants further
+      analysis rather than an immediate
+      conclusion about subscriber churn.
+    </p>
+
+    <p>
+      Viewing hours per title provide a
+      different perspective on content
+      performance. Drama records approximately
+      263 hours per title, followed by
+      Documentary at 226, Sci-Fi at 211
+      and Action at 205.
+      These values help compare engagement
+      against catalogue size, reducing
+      the risk of favouring a genre
+      solely because it contains
+      more titles.
+    </p>
+
+    <p>
+      The genre efficiency ranking identifies
+      Action as the highest-ranked genre,
+      followed by Drama and Comedy.
+      This indicates that the ranking
+      methodology produces a different
+      order from total viewing hours alone.
+      It supports the case for using
+      more than one performance measure
+      when evaluating content investment.
+    </p>
+
+    <p>
+      The subscription-tier comparison
+      provides further insight into how
+      audiences are distributed across
+      Basic, Standard and Premium plans.
+      These differences may be useful
+      for future segmentation analysis,
+      although subscriber counts alone
+      cannot establish revenue contribution,
+      profitability or willingness to pay.
+    </p>
+
+    <p>
+      Overall, the dashboard highlights
+      the importance of distinguishing
+      subscriber activity from content
+      consumption and catalogue efficiency.
+      The most commercially attractive
+      content mix cannot be determined
+      from viewing behaviour alone,
+      but these findings identify
+      where a more detailed investment
+      assessment should begin.
+    </p>
+
+  </div>
+
+  <div class="recommendation">
+
+    <h3>Management Considerations</h3>
+
+    <p>
+      StreamWave should compare content
+      efficiency with acquisition and
+      licensing costs before making
+      investment decisions. High-efficiency
+      genres deserve further review,
+      while genres with strong completion
+      but weaker subscriber activity
+      may benefit from targeted
+      audience analysis.
+    </p>
+
+    <p>
+      Management should also examine
+      subscriber activity by genre
+      and subscription tier over time,
+      using consistent definitions
+      to distinguish active viewing
+      behaviour from actual customer
+      retention and churn.
+    </p>
+
+  </div>
+
+</section>
+
+<!-- OVERALL CONCLUSION -->
+
+<section class="conclusion">
+
+  <h2>Overall Business Conclusion</h2>
+
+  <p>
+    The StreamWave analysis demonstrates
+    why viewing volume, engagement quality
+    and content efficiency should be
+    considered together when assessing
+    streaming performance.
+  </p>
+
+  <p>
+    Drama and Comedy generate substantial
+    viewing activity and repeat engagement,
+    making them important components
+    of the existing content offering.
+    Biography, despite attracting
+    much lower viewing volume,
+    shows particularly strong
+    average completion behaviour.
+    Meanwhile, Action leads the
+    dashboard's genre efficiency ranking.
+  </p>
+
+  <p>
+    These findings do not point to a
+    single genre that should receive
+    all future investment. Instead,
+    they suggest that different genres
+    contribute to performance in
+    different ways: some attract
+    high volumes of consumption,
+    others sustain deeper engagement,
+    and others may use catalogue
+    capacity more efficiently.
+  </p>
+
+  <h3>Recommended Business Priorities</h3>
+
+  <ol>
+    <li>
+      Evaluate content investment using
+      viewing hours, completion behaviour,
+      repeat engagement and catalogue
+      efficiency together.
+    </li>
+
+    <li>
+      Protect the value of high-demand
+      genres such as Drama and Comedy,
+      while assessing whether additional
+      titles would generate incremental
+      viewing activity.
+    </li>
+
+    <li>
+      Investigate smaller genres with
+      strong completion behaviour,
+      including Biography, to understand
+      audience characteristics and
+      potential growth opportunities.
+    </li>
+
+    <li>
+      Review the drivers of Action's
+      leading efficiency ranking
+      and test whether that performance
+      is consistent across titles
+      and audience segments.
+    </li>
+
+    <li>
+      Incorporate content acquisition
+      costs, licensing expenses,
+      revenue and longitudinal
+      subscriber retention measures
+      into future investment analysis.
+    </li>
+  </ol>
+
+  <p>
+    The project illustrates how
+    structured Excel analysis can
+    support practical content
+    portfolio decisions by separating
+    popularity from engagement
+    quality and efficiency.
+    It provides management with
+    a clearer basis for deciding
+    which areas to investigate,
+    protect or develop further.
+  </p>
+
+</section>
+
+</main>
+
+<footer>
+  StreamWave Entertainment |
+  Microsoft Excel Analytics
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,1058 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>BritConnect | Telecommunications Analytics</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f4f8fb;
+    color: #2c3c4b;
+    line-height: 1.85;
+}
+
+header {
+    background: linear-gradient(135deg, #092c4d, #14658a);
+    color: white;
+    text-align: center;
+    padding: 65px 20px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: clamp(26px, 4vw, 40px);
+    letter-spacing: 1px;
+}
+
+header p {
+    color: #c2e5f2;
+    margin-bottom: 0;
+}
+
+main {
+    max-width: 1200px;
+    margin: 45px auto;
+    padding: 0 20px;
+}
+
+.intro, .dashboard, .conclusion {
+    background: white;
+    padding: 35px;
+    border-radius: 12px;
+    margin-bottom: 38px;
+    box-shadow: 0 5px 22px rgba(15, 55, 85, 0.07);
+}
+
+h2 {
+    color: #14567c;
+    line-height: 1.4;
+}
+
+h3 {
+    color: #17678e;
+    margin-bottom: 8px;
+}
+
+.back {
+    display: inline-block;
+    color: #14567c;
+    font-weight: bold;
+    text-decoration: none;
+    margin-bottom: 25px;
+}
+
+.dashboard img {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: 25px 0;
+    border: 1px solid #dceaf2;
+    border-radius: 7px;
+}
+
+.findings {
+    border-left: 4px solid #2385b5;
+    padding-left: 22px;
+    margin-top: 28px;
+}
+
+.recommendation {
+    background: #edf6fb;
+    padding: 22px 25px;
+    border-radius: 8px;
+    margin-top: 26px;
+}
+
+.recommendation h3 {
+    margin-top: 0;
+}
+
+footer {
+    text-align: center;
+    padding: 30px 20px;
+    color: #607e90;
+}
+
+@media (max-width: 600px) {
+    .intro, .dashboard, .conclusion {
+        padding: 20px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>BRITCONNECT TELECOMMUNICATIONS</h1>
+    <p>
+        Network Reliability | Operational Performance |
+        Customer Experience
+    </p>
+</header>
+
+<main>
+
+<a href="index.html" class="back">
+    &larr; Back to Portfolio
+</a>
+
+<!-- PROJECT INTRODUCTION -->
+
+<section class="intro">
+
+<h2>Project Overview</h2>
+
+<p>
+In telecommunications, a network outage is more
+than a technical disruption. It can interrupt
+essential communication, affect customers across
+multiple locations and place pressure on a
+provider's ability to meet its service commitments.
+</p>
+
+<p>
+This project examines BritConnect's telecommunications
+operations to understand where service disruptions
+occur, which equipment and recurring incidents
+contribute to operational pressure, and how network
+performance relates to customer complaints
+and SLA compliance.
+</p>
+
+<p>
+Using Microsoft SQL Server and Power BI,
+I analysed network outage records, alarm detection,
+equipment failures, maintenance activities,
+vendor performance and customer service data.
+The analysis was developed into three interactive
+dashboards covering Executive Network Performance,
+Reliability and Root Cause Analysis,
+and Customer Experience and SLA Performance.
+</p>
+
+<p>
+The objective was to look beyond the number
+of outages and understand their wider
+operational consequences. This included
+examining how long disruptions lasted,
+how quickly incidents were detected,
+which locations experienced repeated
+problems and where customers were
+most exposed to service failures.
+</p>
+
+<p>
+The findings provide management with
+a structured basis for prioritising
+engineering attention, reviewing
+maintenance practices and improving
+service reliability.
+</p>
+
+</section>
+
+<!-- DASHBOARD 1 -->
+
+<section class="dashboard">
+
+<h2>01. Executive Network Performance Overview</h2>
+
+<p>
+This dashboard provides an executive-level
+assessment of network reliability, combining
+outage frequency, downtime, customer impact,
+incident detection, SLA performance
+and regional network conditions.
+</p>
+
+<p>
+Its purpose is to help management understand
+the overall scale of network disruption
+and identify which areas deserve
+closer operational investigation.
+</p>
+
+<a href="images/britconnect-dashboard-1.png"
+   target="_blank" rel="noopener">
+    <img src="images/britconnect-dashboard-1.png"
+         alt="BritConnect Executive Network Overview">
+</a>
+
+<div class="findings">
+
+<h3>Key Business Findings</h3>
+
+<p>
+The dashboard records approximately 5,000
+network outages, generating more than
+183,000 minutes of total downtime.
+Across these incidents, the dataset
+reports approximately one million
+customer-impact records.
+</p>
+
+<p>
+These figures demonstrate the scale
+of disruption recorded within the
+network. However, outage frequency
+alone does not explain the full
+business impact. Two regions may
+experience similar numbers of
+incidents but have very different
+downtime durations and levels
+of customer exposure.
+</p>
+
+<p>
+Average downtime was 36.59 minutes
+per outage. This provides a useful
+baseline for understanding how long
+incidents typically lasted,
+although the average may conceal
+a smaller number of unusually
+long disruptions.
+</p>
+
+<p>
+The Mean Time to Detect (MTTD)
+was 17.74 minutes. This measures
+the average elapsed time between
+the start of an incident and its
+detection in the underlying
+alarm records.
+</p>
+
+<p>
+From an operational perspective,
+detection time matters because
+engineering teams cannot begin
+an informed response until a
+problem has been identified.
+The figure therefore provides
+a starting point for reviewing
+alarm monitoring and incident
+identification processes.
+</p>
+
+<p>
+The SLA breach rate was 19.58%,
+meaning that approximately one
+in five recorded outages did
+not meet the applicable
+service-level requirement.
+This is a significant
+management consideration
+because service reliability
+must be evaluated against
+the commitments made to customers,
+not simply the number
+of incidents closed.
+</p>
+
+<p>
+The monthly trend shows fluctuations
+in outage activity, with August
+recording the highest monthly count
+at approximately 455 incidents.
+The variation suggests that
+network reliability was not
+completely consistent throughout
+the reporting period.
+</p>
+
+<p>
+However, the trend alone does not
+establish why August experienced
+more incidents. Further investigation
+would be required to determine
+whether equipment conditions,
+planned work, weather or
+other operational factors
+contributed to the increase.
+</p>
+
+<p>
+The regional analysis reveals
+another important distinction.
+London generated the highest
+total downtime, at approximately
+49,652 minutes, while Scotland
+recorded the highest average
+downtime per outage,
+at around 41 minutes.
+</p>
+
+<p>
+This comparison shows why
+total downtime and average
+incident duration should
+not be interpreted in the
+same way. London's result
+highlights its overall
+contribution to downtime,
+whereas Scotland's result
+suggests that individual
+incidents there tended
+to last longer.
+</p>
+
+<p>
+The equipment and root-cause
+comparisons provide further
+direction for engineering review.
+Router-related equipment appears
+among the most frequently
+affected network elements,
+while hardware failures
+contribute the largest share
+of total downtime.
+</p>
+
+<p>
+The vendor comparison also
+shows differences in total
+downtime across suppliers.
+These totals can help identify
+where further review may be
+useful, but they should not
+be used to rank vendor quality
+without considering the number
+of assets supported, network
+exposure and incident severity.
+</p>
+
+<p>
+Overall, the dashboard establishes
+that improving network reliability
+requires attention to incident
+frequency, duration, detection
+speed and customer exposure
+rather than any single KPI.
+</p>
+
+</div>
+
+<div class="recommendation">
+
+<h3>Management Considerations</h3>
+
+<p>
+Management should prioritise
+locations and equipment contributing
+the greatest operational disruption,
+while separately investigating
+regions with longer average
+incident durations.
+</p>
+
+<p>
+Alarm detection performance
+should be reviewed to determine
+whether monitoring rules,
+alert routing or incident
+identification processes
+can be improved.
+</p>
+
+<p>
+Regional and vendor performance
+should also be assessed using
+normalised measures, such as
+downtime per asset or incident
+rates relative to network size,
+before drawing conclusions
+about comparative reliability.
+</p>
+
+</div>
+</section>
+
+<!-- DASHBOARD 2 -->
+
+<section class="dashboard">
+
+<h2>02. Network Reliability & Root Cause Analysis</h2>
+
+<p>
+This dashboard examines the operational
+conditions behind network disruption.
+It brings together equipment failures,
+root causes, repeated incident patterns,
+maintenance activity and regional
+reliability indicators.
+</p>
+
+<p>
+The purpose is to move beyond
+identifying where outages occur
+and investigate which recurring
+problems may require more
+permanent engineering solutions.
+</p>
+
+<a href="images/britconnect-dashboard-2.png"
+   target="_blank" rel="noopener">
+    <img src="images/britconnect-dashboard-2.png"
+         alt="BritConnect Reliability and Root Cause Analysis">
+</a>
+
+<div class="findings">
+
+<h3>Key Business Findings</h3>
+
+<p>
+The analysis identifies 477 repeat
+incident patterns, highlighting
+recurring combinations of network
+problems within the recorded data.
+This is an important finding because
+repeated incidents may indicate
+that the underlying operational
+issue has not been fully addressed.
+</p>
+
+<p>
+An incident can be restored
+successfully without the
+underlying fault being permanently
+eliminated. Where similar problems
+reappear, the business may
+continue to incur engineering
+effort, downtime and
+customer disruption.
+</p>
+
+<p>
+The equipment analysis shows
+that router-related elements
+are among the most frequently
+affected components.
+Hardware failures also make
+a substantial contribution
+to recorded network downtime.
+</p>
+
+<p>
+These findings suggest that
+equipment condition and
+failure recurrence deserve
+closer investigation.
+However, high failure counts
+do not automatically establish
+that a particular equipment
+type is inherently unreliable.
+The number of installed
+assets and their operating
+conditions must also
+be considered.
+</p>
+
+<p>
+The root-cause breakdown
+distinguishes hardware
+failures from software,
+power, transmission,
+fibre and other recorded
+causes of disruption.
+</p>
+
+<p>
+This distinction is useful
+because different fault
+categories require different
+operational responses.
+For example, recurring
+hardware faults may warrant
+asset inspection or replacement,
+while software-related
+incidents may require
+configuration review,
+testing or vendor support.
+</p>
+
+<p>
+The maintenance analysis
+indicates an overall
+completion rate approaching
+95%, suggesting that most
+recorded maintenance
+activities were completed.
+</p>
+
+<p>
+This is a positive operational
+indicator, but maintenance
+completion should not be
+confused with maintenance
+effectiveness. Completing
+a scheduled activity does
+not necessarily mean that
+future failures have
+been prevented.
+</p>
+
+<p>
+The comparison of planned
+and emergency maintenance
+also deserves attention.
+Emergency work is associated
+with greater operational
+urgency and, in the
+dashboard comparison,
+higher average maintenance
+costs than planned activity.
+</p>
+
+<p>
+This provides a reason
+to investigate whether
+recurring emergency work
+could be reduced through
+more targeted preventive
+maintenance. It does
+not, by itself, prove
+that additional planned
+maintenance would
+automatically reduce costs.
+</p>
+
+<p>
+The regional repeat-incident
+comparison helps identify
+where similar problems
+continue to occur.
+These patterns can support
+engineering prioritisation,
+particularly when repeat
+frequency is considered
+alongside downtime duration
+and customer exposure.
+</p>
+
+<p>
+The wider business implication
+is that network reliability
+should be managed through
+both incident restoration
+and longer-term fault
+prevention.
+</p>
+
+<p>
+A team may respond quickly
+to individual incidents,
+but if the same faults
+continue to return,
+the network remains
+exposed to avoidable
+operational pressure.
+</p>
+
+</div>
+
+<div class="recommendation">
+
+<h3>Management Considerations</h3>
+
+<p>
+Engineering teams should
+establish a focused review
+of recurring incident patterns,
+starting with locations and
+equipment showing repeated
+faults alongside substantial
+downtime.
+</p>
+
+<p>
+Preventive maintenance
+priorities should be informed
+by failure history, asset
+condition, service criticality
+and the cost of disruption.
+</p>
+
+<p>
+Management should also
+compare planned and emergency
+maintenance outcomes,
+including repeat failure
+rates after intervention,
+rather than relying
+on maintenance completion
+rates alone.
+</p>
+
+<p>
+For recurring high-impact
+faults, a documented
+root-cause review and
+follow-up verification
+would help establish
+whether corrective action
+has delivered a lasting
+improvement.
+</p>
+
+</div>
+</section>
+
+<!-- DASHBOARD 3 -->
+
+<section class="dashboard">
+
+<h2>03. Customer Experience & SLA Performance</h2>
+
+<p>
+The final dashboard examines the
+customer-facing consequences
+of network service disruption.
+It brings together customer
+complaints, complaint resolution,
+SLA breaches, customer segments,
+communication channels
+and compensation exposure.
+</p>
+
+<p>
+Its purpose is to understand
+how operational reliability
+relates to service experience
+and where improvements may
+be needed to protect
+customer confidence.
+</p>
+
+<a href="images/britconnect-dashboard-3.png"
+   target="_blank" rel="noopener">
+    <img src="images/britconnect-dashboard-3.png"
+         alt="BritConnect Customer Experience and SLA Performance">
+</a>
+
+<div class="findings">
+
+<h3>Key Business Findings</h3>
+
+<p>
+The dashboard analyses approximately
+2,000 customer complaints alongside
+the wider network outage and
+SLA performance records.
+</p>
+
+<p>
+The network recorded 979
+SLA-breaching incidents,
+equivalent to a breach rate
+of 19.58%.
+This provides a measurable
+indication of the proportion
+of outages that did not
+meet the applicable
+service commitments.
+</p>
+
+<p>
+From a customer perspective,
+service-level breaches matter
+because they represent a
+failure to meet the agreed
+standard of service.
+The potential consequences
+include dissatisfaction,
+additional support demand
+and compensation exposure,
+depending on the terms
+of the service agreement.
+</p>
+
+<p>
+The complaint-resolution
+analysis shows that
+approximately 85% of
+complaints were resolved,
+while around 15%
+remained unresolved.
+</p>
+
+<p>
+The resolved share is
+encouraging, but the
+unresolved cases still
+represent customers
+whose concerns may
+require further attention.
+</p>
+
+<p>
+Complaint closure should
+also be considered
+alongside resolution time
+and customer satisfaction.
+A complaint marked as
+resolved does not
+necessarily establish
+that the customer was
+satisfied with the outcome.
+</p>
+
+<p>
+The channel comparison
+shows that the Web channel
+generated the highest
+recorded complaint volume,
+followed by Store
+and Phone.
+</p>
+
+<p>
+This distribution is useful
+for support capacity
+planning, but it should
+not automatically be
+interpreted as customer
+channel preference.
+Channel availability,
+ease of access and
+the number of customers
+using each channel
+may influence the totals.
+</p>
+
+<p>
+Consumer Prepaid accounts
+for the highest recorded
+complaint volume among
+the displayed customer
+segments.
+</p>
+
+<p>
+This suggests that the
+segment deserves closer
+service review.
+However, its complaint
+volume should be compared
+with the size of its
+customer base before
+concluding that prepaid
+customers experience
+disproportionately
+poor service.
+</p>
+
+<p>
+The regional SLA analysis
+identifies East of England
+as having the highest
+displayed breach rate.
+This is important because
+a region with a high
+percentage of breached
+incidents may require
+attention even when its
+total outage volume
+is not the largest.
+</p>
+
+<p>
+The monthly complaint
+trend shows September
+as the highest recorded
+complaint month.
+This can guide a more
+detailed review of
+the incidents, customer
+segments and service
+conditions associated
+with that period.
+</p>
+
+<p>
+The compensation analysis
+adds a financial dimension
+to customer experience.
+Although compensation
+does not capture the
+full cost of poor service,
+it provides an additional
+measure of exposure
+associated with
+service commitments.
+</p>
+
+<p>
+The relationship between
+network disruption and
+customer complaints
+should be investigated
+carefully. The dashboards
+show patterns in both
+operational and customer
+service records, but
+a direct causal link
+between specific outages
+and individual complaints
+requires incident-level
+matching and validation.
+</p>
+
+<p>
+Overall, the dashboard
+demonstrates why network
+performance should not
+be assessed exclusively
+through technical KPIs.
+Customer outcomes provide
+an equally important
+perspective on the
+quality of service
+being delivered.
+</p>
+
+</div>
+
+<div class="recommendation">
+
+<h3>Management Considerations</h3>
+
+<p>
+Management should prioritise
+regions and customer segments
+showing elevated SLA
+breach or complaint exposure,
+using rates relative to
+the relevant customer
+or incident population.
+</p>
+
+<p>
+Unresolved complaints
+should be reviewed by
+age, severity and
+underlying issue to
+identify cases requiring
+urgent follow-up.
+</p>
+
+<p>
+Customer service teams
+should also assess
+whether communication
+during outages is timely,
+consistent and clear.
+</p>
+
+<p>
+Where the data permits,
+linking complaints to
+specific outage incidents
+would help management
+understand which types
+of network disruption
+generate the greatest
+customer impact.
+</p>
+
+</div>
+</section>
+
+<!-- OVERALL CONCLUSION -->
+
+<section class="conclusion">
+
+<h2>Overall Business Conclusion</h2>
+
+<p>
+The BritConnect analysis reveals
+that network reliability is not
+simply a question of how many
+outages occur. The duration
+of those outages, the speed
+of detection, the recurrence
+of faults and the number
+of customers exposed
+all influence the
+operational consequences.
+</p>
+
+<p>
+The Executive Network
+Overview establishes
+the scale of disruption,
+with approximately
+5,000 outages,
+183,000 downtime minutes
+and a 19.58%
+SLA breach rate.
+</p>
+
+<p>
+The Reliability and
+Root Cause dashboard
+adds an explanation
+of where recurring
+operational problems
+are concentrated,
+highlighting equipment
+failures, repeat
+incident patterns
+and maintenance
+performance.
+</p>
+
+<p>
+The Customer Experience
+dashboard then shows
+why these operational
+issues matter beyond
+the engineering function.
+Service disruptions
+can place pressure
+on complaint handling,
+service commitments
+and customer confidence.
+</p>
+
+<p>
+Taken together,
+the three dashboards
+provide a broader
+understanding of
+network performance
+by connecting
+technical reliability,
+operational processes
+and customer-facing
+service outcomes.
+</p>
+
+<h3>Recommended Business Priorities</h3>
+
+<ol>
+
+<li>
+Prioritise recurring
+high-impact faults
+for detailed engineering
+investigation and
+permanent corrective action.
+</li>
+
+<li>
+Review outage detection
+performance and strengthen
+monitoring where delays
+may affect response times.
+</li>
+
+<li>
+Use both total downtime
+and average incident
+duration to identify
+regional reliability
+priorities.
+</li>
+
+<li>
+Assess preventive
+maintenance effectiveness
+through subsequent failure
+rates, not only
+maintenance completion.
+</li>
+
+<li>
+Evaluate vendor and
+equipment performance
+relative to installed
+asset populations
+and operating conditions.
+</li>
+
+<li>
+Improve the visibility
+of customer complaints,
+SLA breaches and
+unresolved cases
+alongside network
+performance indicators.
+</li>
+
+<li>
+Where suitable incident
+identifiers are available,
+connect outage records
+with customer complaints
+to better quantify
+the customer impact
+of specific disruptions.
+</li>
+
+</ol>
+
+<p>
+The purpose of this project
+was to provide a clearer
+basis for deciding
+where engineering effort,
+maintenance resources
+and service improvement
+initiatives should
+be directed.
+</p>
+
+<p>
+By analysing network
+and customer service
+data through SQL Server
+and Power BI,
+the project demonstrates
+how operational information
+can be used to support
+more focused,
+evidence-informed
+management decisions.
+</p>
+
+</section>
+
+</main>
+
+<footer>
+BritConnect Telecommunications |
+SQL Server & Power BI
+</footer>
+
+</body>
+</html>

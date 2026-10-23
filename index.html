@@ -20,7 +20,26 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
+	
+<style id="greentech-card-styles">
+.greentech-project .gt-overview,.greentech-project .gt-business-value{text-align:left}
+.greentech-project .gt-overview p,.greentech-project .gt-business-value p{text-align:left;font-size:1rem;line-height:1.9}
+.greentech-project h3{color:#203c2d;font-size:1rem;letter-spacing:.08em;text-align:left;margin:1.8rem 0 1rem}
+.greentech-project .gt-cover{margin:2rem 0;text-align:left}
+.greentech-project .gt-cover .image{margin:0 0 .5rem}
+.greentech-project .gt-cover img{width:100%;height:auto;border-radius:4px}
+.greentech-project .gt-cover figcaption{font-size:.75rem;color:#526257}
+.greentech-project .gt-findings{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem}
+.greentech-project .gt-finding{background:#edf2e7;border-top:4px solid #527344;padding:1.35rem;text-align:left;min-width:0}
+.greentech-project .gt-finding>span{display:block;color:#416444;font-size:.7rem;font-weight:700;letter-spacing:.04em;line-height:1.6;margin-bottom:.8rem}
+.greentech-project .gt-finding>strong{display:block;color:#203c2d;font-size:1.9rem;line-height:1.2;margin-bottom:.6rem}
+.greentech-project .gt-finding h4{font-size:.85rem;line-height:1.5;color:#203c2d;margin-bottom:.8rem}
+.greentech-project .gt-finding p{font-size:.95rem;line-height:1.75;margin:0;text-align:left}
+.greentech-project .gt-business-value{margin:1.8rem 0}
+.greentech-project .gt-secondary-link{text-align:center;font-size:.85rem}
+@media(max-width:480px){.greentech-project .gt-findings{grid-template-columns:1fr}}
+</style>
+</head>
 	<body class="is-preload">
 
 		<!-- Wrapper -->
@@ -242,50 +261,33 @@ What drives my work is simple: helping organisations move from knowing what is h
 								
 <article class="greentech-project" id="greentech">
   <header class="major">
-    <h2>
-      <a href="https://github.com/evangelemelogu/GreenTech-Manufacturing-Downtime-Analysis" target="_blank" rel="noopener noreferrer">
-        GreenTech Manufacturing Downtime Analysis
-      </a>
-    </h2>
+    <h2><a href="greentech.html">GreenTech Manufacturing<br>Downtime Analysis</a></h2>
     <p>Production Performance | Downtime Drivers | Operator Scheduling</p>
   </header>
 
-  <a href="https://github.com/evangelemelogu/GreenTech-Manufacturing-Downtime-Analysis/blob/main/images/dashboard_1.png" class="image fit" target="_blank" rel="noopener noreferrer">
-    <img src="https://raw.githubusercontent.com/evangelemelogu/GreenTech-Manufacturing-Downtime-Analysis/main/images/dashboard_1.png"
-         alt="GreenTech Power BI dashboard showing downtime factors and production batch performance" loading="lazy" />
-  </a>
+  <figure class="gt-cover">
+    <a href="greentech.html" class="image fit"><img src="images/greentech-cover.png" alt="GreenTech brand illustration featuring eco-cleaning products, recyclable packaging and sustainable manufacturing" width="1600" height="900" loading="lazy"></a>
+    <figcaption>Project illustration</figcaption>
+  </figure>
 
-  <h3>PROJECT OVERVIEW</h3>
-  <p>
-    A production line can look busy while valuable operating time slips away.
-    For GreenTech, I examined where that time was going and which disruptions
-    deserved management attention. Using SQL Server and Power BI, I analysed
-    production batches and downtime records from March to August 2025,
-    bringing together downtime causes, duration and operator scheduling
-    across three interactive dashboards.
-  </p>
+  <div class="gt-overview">
+    <h3>PROJECT OVERVIEW</h3>
+    <p>When a production batch runs late, the total hours tell only part of the story. The more useful question is what interrupted the work and whether the same problem is happening again.</p>
+    <p>For GreenTech, I used SQL Server and Power BI to investigate production batches and downtime records from March to August 2025. I examined the frequency of interruptions, the time they consumed, the products affected and the operator assignments behind the results.</p>
+    <p>I developed three dashboard pages to bring those questions together, then translated the findings into priorities for reviewing cleaning processes, scheduling, material readiness and equipment reliability.</p>
+  </div>
 
-  <h3>WHAT THE ANALYSIS REVEALED</h3>
-  <ul style="text-align: left;">
-    <li><strong>363 of 645 production batches experienced downtime</strong>&mdash;56.28% of the batches analysed.</li>
-    <li><strong>521.83 hours of recorded downtime</strong> showed the scale of time lost across the reporting period.</li>
-    <li><strong>Cleaning and sanitation accounted for 55 hours</strong>, highlighting a process worth reviewing alongside scheduling and material availability.</li>
-  </ul>
+  <h3>KEY ANALYTICAL FINDINGS</h3>
+  <div class="gt-findings">
+    <div class="gt-finding"><span>01 / PRODUCTION DISRUPTION</span><strong>56.28%</strong><h4>of batches recorded downtime</h4><p>Interruptions affected 363 of the 645 batches analysed, making recurring causes worth a closer operational review.</p></div>
+    <div class="gt-finding"><span>02 / TIME LOST</span><strong>521.83 h</strong><h4>of recorded downtime</h4><p>Comparing duration with frequency helps identify the interruptions that consume the most production time.</p></div>
+    <div class="gt-finding"><span>03 / PROCESS PRIORITIES</span><strong>55 h</strong><h4>linked to cleaning and sanitation</h4><p>Cleaning, coordination delays and material shortages highlight areas to review alongside machinery and maintenance.</p></div>
+    <div class="gt-finding"><span>04 / PRODUCT EXPOSURE</span><strong>191 h</strong><h4>for GreenFoam Hand Soap</h4><p>The highest product-level downtime total provides a starting point for investigation, with batch volume and product mix considered.</p></div>
+  </div>
 
-  <h3>BUSINESS VALUE</h3>
-  <p>
-    The project gives operations managers a clearer basis for prioritising
-    recurring disruptions, reviewing changeover and cleaning processes,
-    and investigating scheduling pressure. It connects the analysis to
-    practical decisions about production planning and process improvement.
-  </p>
-
-  <ul class="actions special">
-    <li><a href="https://github.com/evangelemelogu/GreenTech-Manufacturing-Downtime-Analysis" class="button" target="_blank" rel="noopener noreferrer">EXPLORE PROJECT</a></li>
-  </ul>
-  <ul class="actions special">
-    <li><a href="https://github.com/evangelemelogu/GreenTech-Manufacturing-Downtime-Analysis/blob/main/presentation/presentation_GreenTech_Downtime_Analysis.pdf" class="button" target="_blank" rel="noopener noreferrer">VIEW PRESENTATION</a></li>
-  </ul>
+  <div class="gt-business-value"><h3>BUSINESS VALUE</h3><p>The project helps an operations team move from a general downtime total to specific questions about the causes of disruption. It supports a more focused review of recurring delays and provides measures for monitoring the effect of agreed changes.</p></div>
+  <ul class="actions special"><li><a href="greentech.html" class="button">VIEW PROJECT DETAILS</a></li></ul>
+  <p class="gt-secondary-link"><a href="https://github.com/evangelemelogu/GreenTech-Manufacturing-Downtime-Analysis" target="_blank" rel="noopener noreferrer">Explore SQL, data and downloads on GitHub</a></p>
 </article>
 
 <article class="horizon-feature">
